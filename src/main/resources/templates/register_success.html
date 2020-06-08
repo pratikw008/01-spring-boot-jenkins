@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th = http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center">
+		<table>
+				<tr>
+					<td><label>Full Name:</label></td>
+					<td><input type="text" th:field="${user.name}"></td>
+				</tr>
+				<tr>
+					<td><label>Email:</label></td>
+					<td><input type="email" th:field="${user.email}"></td>
+				</tr>
+				<tr>
+					<td><label>Password:</label></td>
+					<td><input type="text" th:field="${user.password}"></td>
+				</tr>
+				<tr>
+					<td><label>Gender:</label></td>
+					<td>
+						<input type="radio" th:field="${user.gender}" value="MALE">Male
+						<input type="radio" th:field="${user.gender}" value="FEMALE">Female
+					</td>
+				</tr>
+				<tr>
+					<td><label>BirthDate:</label></td>
+					<td><input type="date" th:field=${user.birthDate}></td>
+				</tr>
+				<tr>
+					<td><label>Profession:</label></td>
+					<td><input type="text" th:field=${user.profession}></td>
+				</tr>
+				<tr>
+					<td><label>Martial Status:</label></td>
+					<td>
+						<input type="radio" th:field="${user.maritalStatus}" value="MARRIED">Married
+						<input type="radio" th:field="${user.maritalStatus}" value="UNMARRIED">UnMarried
+					</td>
+				</tr>
+				<tr>
+					<td><label>Note:</label></td>
+					<td><textarea rows="5" cols="25" th:field="${user.note}"></textarea></td>
+				</tr>
+		</table>
+		<a href="/viewAllUsers">View All Users</a>
+	</div>
+</body>
+</html>
